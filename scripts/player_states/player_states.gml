@@ -6,10 +6,22 @@ function player_state_move() {
     var move = key_right - key_left != 0;
 	var key_dash= keyboard_check(vk_space);
 	var key_run=keyboard_check(vk_shift);
+	
+	//COLISAO PAREDE E CHAO
+    var touchL = place_meeting(x-1, y, obj_wall);
+    var touchR = place_meeting(x+1, y, obj_wall);
+    var wall   = touchL or touchR;
+    var ground = place_meeting(x, y+1, obj_wall);
 
     //GRAVIDADE
     vspd += grv;
     vspd = clamp(vspd, vspd_min, vspd_max);
+	//VELOCIDADE
+	if (ground && key_run && move){
+		move_spd_max=move_spd_run
+	}else{
+		move_spd_max=move_spd_walk
+	}
 
     //MOVIMENTO
     if (move) {
@@ -26,12 +38,6 @@ function player_state_move() {
     if (hspd != 0) {
         image_xscale = sign(hspd);
     }
-
-    //COLISAO PAREDE E CHAO
-    var touchL = place_meeting(x-1, y, obj_wall);
-    var touchR = place_meeting(x+1, y, obj_wall);
-    var wall   = touchL or touchR;
-    var ground = place_meeting(x, y+1, obj_wall);
 
     //WALL SLIDE
     var max_slide = 1;
@@ -79,6 +85,7 @@ if(key_dash and dash){
 }
 
 function player_state_dash() {
+//sprite_index=spr_volodar_dash;
 hspd=lengthdir_x(dash_force,move_dir);
 dash_time=approach(dash_time,dash_distance,1);
 if(dash_time >= dash_distance){

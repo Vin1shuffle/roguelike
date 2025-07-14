@@ -9,6 +9,8 @@ can_move=0;
 move_dir=0;
 move_spd=0;
 move_spd_max=4.0;
+move_spd_run=8.0;
+move_spd_walk=4.0;
 acc=1.0;
 dcc=1.0;
 
