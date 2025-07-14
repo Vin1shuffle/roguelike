@@ -14,11 +14,11 @@ function player_state_move() {
     //MOVIMENTO
     if (move) {
         sprite_index = spr_volodar_walk;
-        move_dir    = point_direction(0,0, key_right - key_left, 0);
-        move_spd    = approach(move_spd, move_spd_max, dcc);
+        move_dir= point_direction(0,0, key_right - key_left, 0);
+        move_spd= approach(move_spd, move_spd_max, dcc);
     } else {
         sprite_index = spr_volodar;
-        move_spd     = approach(move_spd, 0, dcc);
+        move_spd = approach(move_spd, 0, dcc);
     }
     hspd = lengthdir_x(move_spd, move_dir);
 
@@ -42,12 +42,12 @@ function player_state_move() {
     //WALL JUMP
     if (wall && !ground && key_jump) {
         coyote_time = 0;
-        vspd        = -sqrt(2 * grv * jump_height);
+        vspd=-sqrt(2 * grv * jump_height);
 
         if (touchL  && key_right) hspd = move_spd_max;
         if (touchR  && key_left ) hspd = -move_spd_max;
 
-        sprite_index = spr_volodar_war_jump;
+        sprite_index = spr_volodar_jump;
     }
     if (ground) {
         coyote_time = coyote_time_max;
@@ -58,13 +58,13 @@ function player_state_move() {
     //PULO NORMAL (coyote)
     if (key_jump_p && coyote_time > 0) {
         coyote_time = 0;
-        vspd        = -sqrt(2 * grv * jump_height);
-        sprite_index = spr_volodar_war_jump;
+        vspd= -sqrt(2 * grv * jump_height);
+        sprite_index = spr_volodar_jump;
     }
 
     //ANIMAÇÕES VERTICAIS
     if (!ground) {
-        if (vspd < 0) sprite_index = spr_volodar_war_jump;
-        else           sprite_index = spr_volodar_war_fall;
+        if (vspd < 0) sprite_index = spr_volodar_jump;
+        else sprite_index = spr_volodar_fall;
     }
 }
