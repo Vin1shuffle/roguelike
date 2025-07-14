@@ -1,5 +1,6 @@
 function player_state_move() {
-  
+	
+	//FUNCOES E MOVIMENTO
     var key_left   = keyboard_check(vk_left);
     var key_right  = keyboard_check(vk_right);
     var key_jump   = keyboard_check(vk_up);              
@@ -17,7 +18,7 @@ function player_state_move() {
     vspd += grv;
     vspd = clamp(vspd, vspd_min, vspd_max);
 	//VELOCIDADE
-	if (ground && key_run && move){
+	if (ground and key_run and move){
 		move_spd_max=move_spd_run
 	}else{
 		move_spd_max=move_spd_walk
@@ -68,11 +69,24 @@ function player_state_move() {
         sprite_index = spr_volodar_jump;
     }
 
-    //ANIMAÇÕES VERTICAIS
+    //ANIMAÇÕES
     if (!ground) {
-        if (vspd < 0) sprite_index = spr_volodar_jump;
-        else sprite_index = spr_volodar_fall;
+    if (vspd < 0) {
+        sprite_index = spr_volodar_jump;
+    } else {
+        sprite_index = spr_volodar_fall;
     }
+} else {
+    if (abs(hspd) > 0.1) {
+        if (key_run) {
+            sprite_index = spr_volodar_run;
+        } else {
+            sprite_index = spr_volodar_walk;
+        }
+    } else {
+        sprite_index = spr_volodar;
+    }
+}
 		//DASH
 if(key_dash and dash){
 	hspd=0;
