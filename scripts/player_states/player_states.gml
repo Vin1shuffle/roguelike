@@ -4,7 +4,8 @@ function player_state_move() {
     var key_right  = keyboard_check(vk_right);
     var key_jump   = keyboard_check(vk_up);              
     var move = key_right - key_left != 0;
-	var key_dash= keyboard_check(ord("E"));
+	var key_dash= keyboard_check(vk_space);
+	var key_run=keyboard_check(vk_shift);
 
     //GRAVIDADE
     vspd += grv;
@@ -82,5 +83,5 @@ hspd=lengthdir_x(dash_force,move_dir);
 dash_time=approach(dash_time,dash_distance,1);
 if(dash_time >= dash_distance){
 	state=player_state_move
-}
+	}
 }
