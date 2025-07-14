@@ -16,4 +16,11 @@ jump_height=132;
 coyote_time_max=10;
 coyote_time=0;
 
+//DASH
+dash_force=8;
+dash_time=0;
+dash_distance=15;
+dash=true;
+dash_delay=60;
+
 state=player_state_move;
