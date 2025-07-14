@@ -42,17 +42,17 @@ function player_state_move() {
 
     //WALL SLIDE
     var max_slide = 1;
-    if (wall && !ground) {
+    if (wall and !ground) {
         if (vspd > max_slide) vspd = max_slide;
     }
 
     //WALL JUMP
-    if (wall && !ground && key_jump) {
+    if (wall and !ground and key_jump) {
         coyote_time = 0;
         vspd=-sqrt(2 * grv * jump_height);
 
-        if (touchL  && key_right) hspd = move_spd_max;
-        if (touchR  && key_left ) hspd = -move_spd_max;
+        if (touchL  and key_right) hspd = move_spd_max;
+        if (touchR  and key_left ) hspd = -move_spd_max;
 
         sprite_index = spr_volodar_jump;
     }
@@ -63,7 +63,7 @@ function player_state_move() {
     }
 
     //PULO NORMAL (coyote)
-    if (key_jump && coyote_time > 0) {
+    if (key_jump and coyote_time > 0) {
         coyote_time = 0;
         vspd= -sqrt(2 * grv * jump_height);
         sprite_index = spr_volodar_jump;
@@ -99,7 +99,7 @@ if(key_dash and dash){
 }
 
 function player_state_dash() {
-//sprite_index=spr_volodar_dash;
+sprite_index=spr_volodar_dash;
 hspd=lengthdir_x(dash_force,move_dir);
 dash_time=approach(dash_time,dash_distance,1);
 if(dash_time >= dash_distance){

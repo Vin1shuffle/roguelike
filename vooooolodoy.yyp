@@ -47,6 +47,7 @@
     {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
     {"id":{"name":"spr_rampa_dir","path":"sprites/spr_rampa_dir/spr_rampa_dir.yy",},},
     {"id":{"name":"spr_rampa_esq","path":"sprites/spr_rampa_esq/spr_rampa_esq.yy",},},
+    {"id":{"name":"spr_volodar_dash","path":"sprites/spr_volodar_dash/spr_volodar_dash.yy",},},
     {"id":{"name":"spr_volodar_fall","path":"sprites/spr_volodar_fall/spr_volodar_fall.yy",},},
     {"id":{"name":"spr_volodar_jump","path":"sprites/spr_volodar_jump/spr_volodar_jump.yy",},},
     {"id":{"name":"spr_volodar_run","path":"sprites/spr_volodar_run/spr_volodar_run.yy",},},
