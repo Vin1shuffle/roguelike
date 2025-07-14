@@ -1,0 +1,19 @@
+hspd=0;
+vspd=0;
+vspd_max=10;
+vspd_min=-20;
+grv=1.0;
+
+walljump_grace = 0;
+can_move=0;
+move_dir=0;
+move_spd=0;
+move_spd_max=8.0;
+acc=1.0;
+dcc=1.0;
+
+jump_height=132;
+coyote_time_max=10;
+coyote_time=0;
+
+state=player_state_move;
