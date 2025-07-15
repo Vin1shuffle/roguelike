@@ -13,6 +13,7 @@ move_spd_run=8.0;
 move_spd_walk=4.0;
 acc=1.0;
 dcc=1.0;
+jmp_boost=8;
 
 jump_height=132;
 coyote_time_max=10;

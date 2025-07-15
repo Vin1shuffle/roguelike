@@ -66,6 +66,9 @@ function player_state_move() {
     if (key_jump and coyote_time > 0) {
         coyote_time = 0;
         vspd= -sqrt(2 * grv * jump_height);
+		if(key_run and move and coyote_time >0){
+		hspd+=jmp_boost*sign(hspd)
+		}
         sprite_index = spr_volodar_jump;
     }
 
@@ -87,7 +90,7 @@ function player_state_move() {
         sprite_index = spr_volodar;
     }
 }
-		//DASH
+	//DASH
 if(key_dash and dash){
 	hspd=0;
 	vspd=0;
@@ -102,6 +105,16 @@ function player_state_dash() {
 sprite_index=spr_volodar_dash;
 hspd=lengthdir_x(dash_force,move_dir);
 dash_time=approach(dash_time,dash_distance,1);
+if(dash_time mod 2==0){
+	rastro=instance_create_layer(x,y,layer,obj_dash_rastro);
+	rastro.sprite_index=sprite_index;
+	rastro.image_index=image_index;
+	rastro.image_xscale=image_xscale;
+	rastro.image_yscale=image_yscale;
+	rastro.image_alpha=0.5;
+	rastro.spd=0.1;
+	rastro.rastro=20;
+}
 if(dash_time >= dash_distance){
 	state=player_state_move
 	}
