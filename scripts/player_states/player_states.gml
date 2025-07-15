@@ -107,7 +107,7 @@ hspd=lengthdir_x(dash_force,move_dir);
 dash_time=approach(dash_time,dash_distance,1);
 if(dash_time mod 2==0){
 	rastro=instance_create_layer(x,y,layer,obj_dash_rastro);
-	rastro.sprite_index=sprite_index;
+	rastro.sprite_index=spr_dash_rastro;
 	rastro.image_index=image_index;
 	rastro.image_xscale=image_xscale;
 	rastro.image_yscale=image_yscale;

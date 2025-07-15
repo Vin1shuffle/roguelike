@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Sprites Volodar Classic",
+    "path":"folders/Sprites/Sprites Volodar Classic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

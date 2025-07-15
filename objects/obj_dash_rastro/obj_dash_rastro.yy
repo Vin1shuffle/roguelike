@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_volodar_dash",
-    "path":"sprites/spr_volodar_dash/spr_volodar_dash.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
