@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"macros",
+  "%Name":"macros_cam",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"macros_cam",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
