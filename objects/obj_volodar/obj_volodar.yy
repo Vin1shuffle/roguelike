@@ -36,6 +36,9 @@
     "name":"spr_volodar",
     "path":"sprites/spr_volodar/spr_volodar.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_volodar_mask",
+    "path":"sprites/spr_volodar_mask/spr_volodar_mask.yy",
+  },
   "visible":true,
 }
