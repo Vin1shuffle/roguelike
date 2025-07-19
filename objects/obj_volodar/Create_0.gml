@@ -1,4 +1,5 @@
 #macro MAX_SPD 4.0
+#macro JUMP_HEIGHT 4.0
 hspd=0;
 vspd=0;
 vspd_max=10;
@@ -17,7 +18,7 @@ dcc=1.0;
 crouch=false;
 move_spd_crouch=2.0;
 //JUMP
-jump_height=132;
+jump_height=JUMP_HEIGHT;
 coyote_time_max=10;
 coyote_time=0;
 walljump_grace = 0;
