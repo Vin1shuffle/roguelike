@@ -29,4 +29,4 @@ dash_distance=15;
 dash=true;
 dash_delay=60;
 
-state=playerStateMove;
+state=player_state_move;
