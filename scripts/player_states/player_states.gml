@@ -19,7 +19,6 @@ function player_state_move() {
 		if(ground and key_down){
 			crouch=true;
 			move_spd_max=move_spd_crouch
-			show_debug_message(move_spd_max)
 			if(move_spd >move_spd_max)approach(move_spd, 2, dcc);
 		}else{
 			move_spd_max=move_spd_walk
