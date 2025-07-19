@@ -1,21 +1,21 @@
 #macro LEFT_SIDE "l"
 #macro RIGHT_SIDE "r"
 #macro ANY_SIDE "a"
-//FUNCOES E MOVIMENTO
-var key_left=keyboard_check(vk_left);
-var key_right=keyboard_check(vk_right);
-var key_jump=keyboard_check(vk_up);              
-var move=key_right-key_left!=0;
-var key_dash=keyboard_check(vk_space);
-var key_run=keyboard_check(vk_shift);
-var key_down=keyboard_check(vk_down);
-		
+var crouch = false;
 //COLISAO PAREDE E CHAO
 function isGround() {
 	return place_meeting(x, y+1, obj_wall);
 }
 
 function player_state_move() {
+	//FUNCOES E MOVIMENTO
+	var key_left=keyboard_check(vk_left);
+	var key_right=keyboard_check(vk_right);
+	var key_jump=keyboard_check(vk_up);              
+	var move=key_right-key_left!=0;
+	var key_dash=keyboard_check(vk_space);
+	var key_run=keyboard_check(vk_shift);
+	var key_down=keyboard_check(vk_down);
 	//AGACHAR
 	verifyCrouch()
     //GRAVIDADE
@@ -103,6 +103,7 @@ function player_state_move() {
 }
 
 function verifyCrouch() {
+	var key_down=keyboard_check(vk_down);
 	if(isGround and key_down){
 		crouch=true;
 		move_spd_max=move_spd_crouch
@@ -115,6 +116,10 @@ function verifyCrouch() {
 }
 
 function handleMovement() {
+	var key_left=keyboard_check(vk_left);
+	var key_right=keyboard_check(vk_right);
+	var move=key_right-key_left!=0;
+	var key_run=keyboard_check(vk_shift);
 	//VELOCIDADE
 	if (isGround and key_run and move){
 		move_spd_max=move_spd_run
