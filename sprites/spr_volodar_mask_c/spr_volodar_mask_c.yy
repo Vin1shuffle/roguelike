@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v2",
+  "$GMSprite":"",
   "%Name":"spr_volodar_mask_c",
   "bboxMode":0,
   "bbox_bottom":48,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"fad67e01-92a9-4e42-bb6e-2f70b22e88a4","name":"fad67e01-92a9-4e42-bb6e-2f70b22e88a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"fad67e01-92a9-4e42-bb6e-2f70b22e88a4","name":"fad67e01-92a9-4e42-bb6e-2f70b22e88a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

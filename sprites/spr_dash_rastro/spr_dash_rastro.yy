@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v2",
+  "$GMSprite":"",
   "%Name":"spr_dash_rastro",
   "bboxMode":2,
   "bbox_bottom":27,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"6e6fcc22-705a-4d7d-94ad-d75158b6bb2f","name":"6e6fcc22-705a-4d7d-94ad-d75158b6bb2f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"6e6fcc22-705a-4d7d-94ad-d75158b6bb2f","name":"6e6fcc22-705a-4d7d-94ad-d75158b6bb2f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

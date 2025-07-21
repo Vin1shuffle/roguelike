@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v2",
+  "$GMSprite":"",
   "%Name":"spr_volodar_dash",
   "bboxMode":2,
   "bbox_bottom":53,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"560e0fc3-1192-4fe2-b32c-d3408f131bbc","name":"560e0fc3-1192-4fe2-b32c-d3408f131bbc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"560e0fc3-1192-4fe2-b32c-d3408f131bbc","name":"560e0fc3-1192-4fe2-b32c-d3408f131bbc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
